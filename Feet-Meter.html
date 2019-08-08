@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Feet &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="feet" type="number" value="0"
+            oninput="FeetToMeters(this.value)" onchange="FeetToMeters(this.value)">
+        &nbsp;&nbsp; To Meters: &nbsp; <q id="resultMeter"></q> <br />
+        Meters &nbsp;&nbsp; <input id="meters" type="number" value="0" oninput="MetersToFeet(this.value)"
+            onchange="MetersToFeet(this.value)">
+        &nbsp;&nbsp; To Feet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: &nbsp; <q id="resultFeet"></q>
+    </h3>
+    <script>
+        function FeetToMeters(num) {
+            num = parseFloat(num);
+            document.getElementById("resultMeter").innerHTML = parseFloat( 0.305 * num) + " Meter"
+        }
+        function MetersToFeet(num) {
+            num = parseFloat(num);
+            document.getElementById("resultFeet").innerHTML = parseFloat( 3.279 * num) + " Foot"
+        }
+    </script>
+
+</body>
+
+</html>
